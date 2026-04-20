@@ -24,7 +24,7 @@ Merged TOML (later files override keys, not whole sections): defaults → `/etc/
 
 See `config/examples/` for Debian- and Fedora-oriented samples.
 
-Operational notes and packaging are maintained in Memoria: [[Topics/ServerTools]].
+Full operational notes (config merge, distros, Docker socket) live in the Memoria wiki page **Topics/ServerTools**.
 
 ## Repository
 
