@@ -1,0 +1,32 @@
+[workspace]
+resolver = "2"
+members = ["common", "network", "docker", "system"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Solrak97/server_tools"
+
+[workspace.dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive", "env"] }
+crossterm = "0.28"
+dirs = "5"
+humantime-serde = "1"
+ratatui = "0.29"
+serde = { version = "1", features = ["derive"] }
+thiserror = "1"
+toml = "0.8"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+
+# network + system
+sysinfo = "0.33"
+
+# docker
+bollard = "0.19"
+futures-util = "0.3"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "signal"] }
+
+st-common = { path = "common" }

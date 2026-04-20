@@ -1,0 +1,16 @@
+[package]
+name = "st-common"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Shared configuration and helpers for server_tools TUIs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+dirs.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+toml.workspace = true
+tracing.workspace = true
+tracing-subscriber = { workspace = true }

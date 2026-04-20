@@ -1,0 +1,23 @@
+# Example: site-wide defaults on Debian/Ubuntu.
+# Install as: /etc/server_tools/config.toml
+#
+# Debian packages often use /var/run/docker.sock (symlink to /run/docker.sock).
+# Rootless Docker: set [docker].socket_path to ~/.docker/run/docker.sock for the service user.
+
+[global]
+log_filter = "warn"
+
+[network]
+refresh_ms = 1000
+hide_interfaces = ["lo"]
+show_listeners = true
+
+[docker]
+refresh_ms = 2000
+socket_path = "/var/run/docker.sock"
+list_all_containers = true
+
+[system]
+refresh_ms = 1500
+process_limit = 20
+show_per_cpu = true

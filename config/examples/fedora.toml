@@ -1,0 +1,21 @@
+# Example: Fedora/RHEL-style deployment (paths match most container-focused hosts).
+# Same merge rules as Debian: /etc/server_tools/config.toml then XDG user file.
+
+[global]
+log_filter = "warn"
+
+[network]
+refresh_ms = 1000
+# hide_interfaces = ["lo"]
+show_listeners = true
+
+[docker]
+refresh_ms = 2000
+# Podman-docker: often still exposes /var/run/docker.sock when podman-docker is installed
+socket_path = "/var/run/docker.sock"
+list_all_containers = true
+
+[system]
+refresh_ms = 1500
+process_limit = 18
+show_per_cpu = true
